@@ -1,0 +1,47 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+        <!-- Footer -->
+        <hr/>
+        <footer class="footer footer-fixed-bottom">
+	<div class="container">
+	    <div class="footer-grids">
+	        <div class="col-md-3 footer-logo">
+	            <h4><span class="fa fa-hashtag"></span> Desenvolvedores</h4>
+                    <ul>
+	                <li>(13) 99661-3613 - Caio Araujo</li>
+	                <li>(13) 98859-6121 - Camila França</li>
+                        <li>(13) 98156-2780 - Gustavo Augusto</li>
+	                <li>(13) 99738-0108 - Wagner Ferreira</li>
+	            </ul>
+	        </div>
+	    </div>
+
+	<div class="col-md-6 recent-posts">
+	    <center>
+	        <h4>Domination</h4>
+	            <div class="recent-posts">
+	                <iframe src=""></iframe>
+	            </div>
+	    </center>
+	</div>
+	    <div class="col-md-3 address">
+	       	<h4>Contatos <span class="fa fa-phone"></span></h4>
+	        <h5>_Telefones:</h5>
+	            <ul>
+	                <li>(13) 99661-3613 - Caio</li>
+	                <li>(13) 98859-6121 - Camila</li>
+                        <li>(13) 98156-2780 - Gustavo</li>
+	                <li>(13) 99738-0108 - Wagner</li>
+	            </ul>
+	    </div>
+	</div>		
+	<a name="contatos"></a>
+	</footer>
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>

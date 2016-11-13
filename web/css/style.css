@@ -1,0 +1,31 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+p{
+    text-align:justify;
+}
+.navbar-inverse {
+    background-color: #005742;
+    border-color: #005742;
+}
+#list1{
+    background-color: #DD7766
+}
+#list2{
+    background-color: #50CC77
+}
+#list3{
+    background-color: #5077CC
+}
+#list4{
+    background-color: #AAAA55
+}
+.badge{
+    background-color: #005742
+}

@@ -1,0 +1,11 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="col-md-3">
+    <p class="lead text-center">Matérias</p>
+    <div class="list-group">
+        <a href="#" class="list-group-item" id="list1">Ciências Humanas </a>
+        <a href="#" class="list-group-item" id="list2">Ciências da Natureza</a>
+        <a href="#" class="list-group-item" id="list3">Linguagens, Códigos</a>
+        <a href="#" class="list-group-item" id="list4">Matemática</a>
+    </div>
+</div>
