@@ -10,37 +10,88 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+
+    // Título da Inclusão
+    String acao = "Usuários - Cadastrar";
+    // Array do database na variável "lista_usuario"
     ArrayList<Usuarios> lista_usuarios = new DataBase().getUsuarios();
-    if (request.getParameter("salvar")!=null) {
-            Usuarios usr = new Usuarios();
-            usr.setNome(request.getParameter("nome"));
-            usr.setIdade(request.getParameter("idade"));
-            usr.setEmail(request.getParameter("email"));
-            usr.setNome_usuario(request.getParameter("nome_usuario"));
-            lista_usuarios.add(usr);
-            response.sendRedirect("teste.jsp");
-        }
+    // Declaração de variável vazia
+    Usuarios usr = null;
+    // Declarando variável id  com um valor -1
+    int id = -1;
+    // Condição se a resquest do form é igual POST ele faz, ele pega o parâmetro da ID.
+    if (request.getMethod() == "POST") {
+        id = Integer.parseInt(request.getParameter("id"));
+        usr = (id == -1) ? new Usuarios() : lista_usuarios.get(id);
+    // Condição de exclusão    
+            if (request.getParameter("submit").equals("Excluir")) {
+                lista_usuarios.remove(id);
+    // Condição de edição e inclusão da ação. 
+            }else {
+                usr.setNome(request.getParameter("nome"));
+                usr.setIdade(request.getParameter("idade"));
+                usr.setEmail(request.getParameter("email"));
+                usr.setNome_usuario(request.getParameter("nome_usuario"));
+                    if (id == -1) {
+                    lista_usuarios.add(usr);
+                    }
+            }
+    // Resposta enviada para página "usuarios.jsp" .        
+    response.sendRedirect("usuarios.jsp");
+    // Condição de inclusão da ação. 
+    }else if (request.getParameter("c") == null) {
+        usr = new Usuarios();
+        usr.setNome("");
+        usr.setIdade("");
+        usr.setEmail("");
+        usr.setNome_usuario("");
+    // Página de edição.     
+    }else {
+        id = Integer.parseInt(request.getParameter("c"));
+        usr = lista_usuarios.get(id);
+        acao = "Usuarios - Editar, Nome: ";
+    }
 %>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>World domination quiz</title>
-    </head>
-    <body>
     <%@ include file="WEB-INF/header.jspf" %> 
-    <div class="container">
-        <%@ include file="WEB-INF/menu.jspf" %>     
+    <body>
+    <div class="container">    
         <div class="row">
-            <div class="col-md-6">
-                <form>
-                    Nome: <input type="text" name="nome">
-                    Idade: <input type="text" name="idade">
-                    Cidade: <input type="text" name="cidade">
-                    E-mail: <input type="text" name="email">
-                    Nome de acesso: <input type="text" name="acesso">
-                    <input type="submit" name="salvar" value="Iniciar teste">
-                </form>
+            <div class="col-md-12">
+                <center>
+        <h1> <%= acao%> </h1>
+        <hr/>
+                <div class="form">
+        <form action="" method="POST">
+            <input type="hidden" name="id" value="<%= id%>">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" placeholder="Caio dos Santos de Araujo" value="<%= usr.getNome()%>" />
+            </div>
+            <div class="form-group">
+                <label for="rg">Idade</label>
+                <input type="text" class="form-control" name="idade" placeholder="00" required value="<%= usr.getIdade()%>"/>
+            </div>
+            <div class="form-group">
+                <label for="E-mail">E-mail</label>
+                <input type="email" class="form-control" name="email" placeholder="robsoncleison@bol.com" value="<%= usr.getEmail()%>" />
+            </div>
+            <div class="form-group">
+                <label for="Telefone">Nome do Usuário</label>
+                <input type="text" class="form-control" name="nome_usuario" placeholder="(13) 9 9747-4545" value="<%= usr.getNome_usuario()%>"/>
+            </div>
+            <input class="btn btn-primary" type="submit" name="submit" value="Salvar" />
+            <%
+                if (acao != "Usuários - Cadastrar") {%>
+            <button class="btn btn-danger" id="deleteUsr" type="submit" name="submit" value="Excluir">
+                Excluir
+            </button>
+            <%
+                }
+            %>
+            <a href="index.jsp" class="btn btn-info">Voltar</a>
+        </form>
+    </div>
+                </center>
             </div>
         </div>
     </div>

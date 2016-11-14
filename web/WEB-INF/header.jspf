@@ -40,7 +40,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+                    <li><a href="cadastro.jsp"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
                 </ul>
             </div>
