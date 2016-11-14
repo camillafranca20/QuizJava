@@ -30,7 +30,7 @@ public class Quiz {
             +"Os sonhos que hão de vir no sono da morte<br>"
             +"Quando tivemos escapado ao tumulto vital<br>"
             +"Nos obrigam a hesitar: e é essa a reflexão<br>"
-            +"Que dá à desventura uma vida tão longa<br><h6>SHAKESPEARE, W. Hamlet.</h6><br></i>"
+            +"Que dá à desventura uma vida tão longa<br><h6>SHAKESPEARE, W. Hamlet.</h6></i></h5><br>"
             +"Este solilóquio pode ser considerado um percursor do existencialismo ao enfatizar a tensão entre<br>"
             +"A) consciência de si e angústia humana<br>"
             +"B) inevitabilidade do destino e incerteza moral<br>"
@@ -46,12 +46,13 @@ public class Quiz {
             +"integração subordinada das colônias do império Iuso."
             +"Dessa feita, ao contrário do que se de nas Minas Gerais"
             +"(1789), a sedição avançou sobre a sua decorrência<br>"
-            +"<h6> JANCSÓ, I.;PIMENTA, J.P. Peças de um mosaico. In: MOTA, C. G. (Org.). Viagem incompleta: a experiência brasileira (1500-2000).</h6>"
-            +"A) consciência de si e angústia humana<br>"
-            +"B) inevitabilidade do destino e incerteza moral<br>"
-            +"C) tragacidade da personagem e ordem do mundo<br>"
-            +"D) racionalidade argumentativa e loucura iminente<br>"
-            +"E) dependência paterna e impossibilidade de ação<br>", "3", new String[]{"3","2","1"});
+            +"<h6> JANCSÓ, I.;PIMENTA, J.P. Peças de um mosaico. In: MOTA, C. G. (Org.). Viagem incompleta: a experiência brasileira (1500-2000).</h6></h5><br>"
+            +"A diferença entre as sediações abordadas no texto encontrava-se na pretensão de<br>"
+            +"A) eliminar a hierarquia militar<br>"
+            +"B) abolir a escravidão africana<br>"
+            +"C) anular o domínio metropolitano<br>"
+            +"D) suprimir a propriedade fundiária<br>"
+            +"E) extinguir o absolutismo monárquico<br>", "B", new String[]{"A","B","C","D","E"});
             ch.add(q2);
             Questao q3 = new Questao
             ("3+4?", "7", new String[]{"7","1","12"});

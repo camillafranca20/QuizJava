@@ -12,7 +12,7 @@
     }
 %>
 <div class="container">
-<h2>Usuarios</h2>
+<h2>Usuários</h2>
 
 <table class=" table table-striped table-hover" id="table-usuarios">
     <thead>

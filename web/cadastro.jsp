@@ -49,7 +49,7 @@
     }else {
         id = Integer.parseInt(request.getParameter("c"));
         usr = lista_usuarios.get(id);
-        acao = "Usuarios - Editar, Nome: ";
+        acao = "Usuários - Editar";
     }
 %>
     <%@ include file="WEB-INF/header.jspf" %> 
@@ -60,7 +60,7 @@
                 <center>
         <h1> <%= acao%> </h1>
         <hr/>
-                <div class="form">
+        <div class="form">
         <form action="" method="POST">
             <input type="hidden" name="id" value="<%= id%>">
             <div class="form-group">
