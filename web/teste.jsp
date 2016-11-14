@@ -20,20 +20,34 @@
         <title>Teste: WebQuiz</title>
     </head>
     <body>
-        <h1>WebQuiz</h1>
-        <h2>Teste</h2>
-        <hr/>
-        <form>
-            <%ArrayList<Questao> test = Quiz.getTeste();%>
-            <%for(Questao q: test){%>
-            <h4><%= q.getQuestao() %></h4>
-                <%for(String alternative: q.getAlternativas()){%>
-                <input type="radio" name="<%=test.indexOf(q)%>"
-                       value="<%=alternative%>"/><%=alternative%>
-                <%}%>
+        <%@ include file="WEB-INF/logado.jspf" %>
+        <div class="container">
+        <%@ include file="WEB-INF/menu.jspf" %>
+        <div class="container">
+            <h1>Domination Quiz</h1>
+            <h2>Usuário: </h2>
+            <h2>Matéria: </h2>
             <hr/>
-            <%}%>
-            <input type="submit" name="test" value="Concluir"/>
-        </form>
+            <center>
+	            <div class="recent-posts">
+                        <img src="img/hicon.png">
+	            </div>
+            </center>
+            
+            <form>
+                <%ArrayList<Questao> test = Quiz.getTeste();%>
+                <%for(Questao q: test){%>
+                <h4><%= q.getQuestao() %></h4>
+                    <%for(String alternative: q.getAlternativas()){%>
+                    <input type="radio" style="margin-left: 20px" name="<%=test.indexOf(q)%>"
+                           value="<%=alternative%>"/><%=alternative%>
+                    <%}%>
+                <hr/>
+                <%}%>
+                <input type="submit" name="test" value="Concluir"/>
+            </form>
+            </div>
+        </div>
+                <%@ include file="WEB-INF/footer.jspf" %>
     </body>
 </html>

@@ -8,10 +8,10 @@
 	        <div class="col-md-3 footer-logo">
 	            <h4><span class="fa fa-hashtag"></span> Desenvolvedores</h4>
                     <ul>
-	                <li>(13) 99661-3613 - Caio Araujo</li>
-	                <li>(13) 98859-6121 - Camila França</li>
-                        <li>(13) 98156-2780 - Gustavo Augusto</li>
-	                <li>(13) 99738-0108 - Wagner Ferreira</li>
+	                <li>Caio Araujo</li>
+	                <li>Camila França</li>
+                        <li>Gustavo Augusto</li>
+	                <li>Wagner Ferreira</li>
 	            </ul>
 	        </div>
 	    </div>
@@ -20,7 +20,7 @@
 	    <center>
 	        <h4>Domination</h4>
 	            <div class="recent-posts">
-	                <iframe src=""></iframe>
+                        <img src="img/icon.png">
 	            </div>
 	    </center>
 	</div>

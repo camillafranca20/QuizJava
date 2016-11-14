@@ -29,3 +29,10 @@ p{
 .badge{
     background-color: #005742
 }
+h5 {
+    text-align: justify;
+}
+h6 {
+    font-size: 10px;
+    padding-left: 70px;
+}
