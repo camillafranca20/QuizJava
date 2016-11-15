@@ -1,3 +1,5 @@
+<%@page import="com.domain.quiz.DataBase"%>
+<%@page import="com.domain.quiz.Usuarios"%>
 <%@page import="com.domain.quiz.Quiz"%>
 <%@page import="com.domain.quiz.Questao"%>
 <%@page import="java.util.ArrayList"%>
@@ -9,7 +11,12 @@
             request.getParameter("0"),
             request.getParameter("1"),
             request.getParameter("2"),
-            request.getParameter("3")
+            request.getParameter("3"),
+            request.getParameter("4"),
+            request.getParameter("5"),
+            request.getParameter("6"),
+            request.getParameter("7")
+                
         });
         response.sendRedirect("index.jsp");
     }
@@ -25,7 +32,7 @@
         <%@ include file="WEB-INF/menu.jspf" %>
         <div class="container">
             <h1>Domination Quiz</h1>
-            <h2>Usuário: </h2>
+            <h2>Usuário:</h2>
             <h2>Matéria: </h2>
             <hr/>
             <center>
@@ -38,13 +45,17 @@
                 <%ArrayList<Questao> test = Quiz.getTeste();%>
                 <%for(Questao q: test){%>
                 <h4><%= q.getQuestao() %></h4>
+                
+                    
                     <%for(String alternative: q.getAlternativas()){%>
+                    
+                    	
                     <input type="radio" style="margin-left: 20px" name="<%=test.indexOf(q)%>"
                            value="<%=alternative%>"/><%=alternative%>
                     <%}%>
                 <hr/>
                 <%}%>
-                <input type="submit" name="test" value="Concluir"/>
+                <input type="submit" name="test" class="btn btn-primary" value="Concluir"/>
             </form>
             </div>
         </div>

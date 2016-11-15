@@ -72,12 +72,12 @@
                 <input type="text" class="form-control" name="idade" placeholder="00" required value="<%= usr.getIdade()%>"/>
             </div>
             <div class="form-group">
-                <label for="E-mail">E-mail</label>
-                <input type="email" class="form-control" name="email" placeholder="robsoncleison@bol.com" value="<%= usr.getEmail()%>" />
+                <label for="E-mail">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="user@domain.com" value="<%= usr.getEmail()%>" />
             </div>
             <div class="form-group">
                 <label for="Telefone">Nome do Usuário</label>
-                <input type="text" class="form-control" name="nome_usuario" placeholder="(13) 9 9747-4545" value="<%= usr.getNome_usuario()%>"/>
+                <input type="text" class="form-control" name="nome_usuario" placeholder="user" value="<%= usr.getNome_usuario()%>"/>
             </div>
             <input class="btn btn-primary" type="submit" name="submit" value="Salvar" />
             <%

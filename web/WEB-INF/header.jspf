@@ -1,7 +1,10 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
+<%@page import="com.domain.quiz.Quiz"%>
+<%@page import="com.domain.quiz.DataBase"%>
+<%@page import="com.domain.quiz.Usuarios"%>
+<%@page import="java.util.ArrayList"%>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,8 +47,7 @@
                     <li><a href="cadastro.jsp"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Entrar</a>
                         <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                
+                            <li>   
                                 <div class="row">
                                     <form class="formlogin" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
