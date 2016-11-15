@@ -10,7 +10,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-
     // Título da Inclusão
     String acao = "Usuários - Cadastrar";
     // Array do database na variável "lista_usuario"
@@ -57,41 +56,41 @@
     <div class="container">    
         <div class="row">
             <div class="col-md-12">
-                <center>
-        <h1> <%= acao%> </h1>
-        <hr/>
+            <center>
+                <h1> <%= acao%> </h1>
+                <hr/>
         <div class="form">
-        <form action="" method="POST">
-            <input type="hidden" name="id" value="<%= id%>">
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" placeholder="Caio dos Santos de Araujo" value="<%= usr.getNome()%>" />
-            </div>
-            <div class="form-group">
-                <label for="rg">Idade</label>
-                <input type="text" class="form-control" name="idade" placeholder="00" required value="<%= usr.getIdade()%>"/>
-            </div>
-            <div class="form-group">
-                <label for="E-mail">Email</label>
-                <input type="email" class="form-control" name="email" placeholder="user@domain.com" value="<%= usr.getEmail()%>" />
-            </div>
-            <div class="form-group">
-                <label for="Telefone">Nome do Usuário</label>
-                <input type="text" class="form-control" name="nome_usuario" placeholder="user" value="<%= usr.getNome_usuario()%>"/>
-            </div>
-            <input class="btn btn-primary" type="submit" name="submit" value="Salvar" />
-            <%
-                if (acao != "Usuários - Cadastrar") {%>
-            <button class="btn btn-danger" id="deleteUsr" type="submit" name="submit" value="Excluir">
-                Excluir
-            </button>
-            <%
-                }
-            %>
-            <a href="index.jsp" class="btn btn-info">Voltar</a>
-        </form>
-    </div>
-                </center>
+            <form action="" method="POST">
+                <input type="hidden" name="id" value="<%= id%>">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Caio dos Santos de Araujo" value="<%= usr.getNome()%>" />
+                </div>
+                <div class="form-group">
+                    <label for="rg">Idade</label>
+                    <input type="text" class="form-control" name="idade" placeholder="00" required value="<%= usr.getIdade()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="E-mail">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="user@domain.com" value="<%= usr.getEmail()%>" />
+                </div>
+                <div class="form-group">
+                    <label for="Telefone">Nome do Usuário</label>
+                    <input type="text" class="form-control" name="nome_usuario" placeholder="user" value="<%= usr.getNome_usuario()%>"/>
+                </div>
+                <input class="btn btn-primary" type="submit" name="submit" value="Salvar" />
+                <%
+                    if (acao != "Usuários - Cadastrar") {%>
+                        <button class="btn btn-danger" id="deleteUsr" type="submit" name="submit" value="Excluir">
+                            Excluir
+                        </button>
+                <%
+                    }
+                %>
+                <a href="index.jsp" class="btn btn-info">Voltar</a>
+            </form>
+        </div>
+            </center>        
             </div>
         </div>
     </div>

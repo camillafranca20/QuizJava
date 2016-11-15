@@ -15,9 +15,6 @@ public class Quiz {
     private static double MediaNotas = 0.0;
     private static double ultimaNota = 0.0;
     private static ArrayList<Questao> ch;
-    private static ArrayList<Questao> cn;
-    private static ArrayList<Questao> ma;
-    private static ArrayList<Questao> lt;
     
     public static ArrayList<Questao> getTeste(){
         if(ch == null){

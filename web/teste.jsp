@@ -15,8 +15,7 @@
             request.getParameter("4"),
             request.getParameter("5"),
             request.getParameter("6"),
-            request.getParameter("7")
-                
+            request.getParameter("7") 
         });
         response.sendRedirect("index.jsp");
     }
@@ -40,16 +39,11 @@
                         <img src="img/hicon.png">
 	            </div>
             </center>
-            
             <form>
                 <%ArrayList<Questao> test = Quiz.getTeste();%>
                 <%for(Questao q: test){%>
                 <h4><%= q.getQuestao() %></h4>
-                
-                    
                     <%for(String alternative: q.getAlternativas()){%>
-                    
-                    	
                     <input type="radio" style="margin-left: 20px" name="<%=test.indexOf(q)%>"
                            value="<%=alternative%>"/><%=alternative%>
                     <%}%>

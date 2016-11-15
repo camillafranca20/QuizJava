@@ -4,6 +4,10 @@
 <%@page import="com.domain.quiz.DataBase"%>
 <%@page import="com.domain.quiz.Usuarios"%>
 <%@page import="java.util.ArrayList"%>
+<%
+    ArrayList<Usuarios> usuario = DataBase.getUsuarios();
+%>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,13 +53,13 @@
                         <ul id="login-dp" class="dropdown-menu">
                             <li>   
                                 <div class="row">
-                                    <form class="formlogin" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <form class="formlogin" role="form" method="post" action="index.jsp" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputEmail2">Email</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="user@domain.com" required>
+                                            <input type="email" name="domain" class="form-control" id="exampleInputEmail2" placeholder="user@domain.com" required>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                                            <button type="submit" name="logon" class="btn btn-primary btn-block">Entrar</button>                             
                                         </div>
                                     </form>
                                     <div class="bottom text-center">
