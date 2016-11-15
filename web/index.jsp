@@ -1,10 +1,21 @@
 <%@page import="com.domain.quiz.Quiz"%>
+<%@page import="com.domain.quiz.Usuarios" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.domain.quiz.DataBase"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    ArrayList<Usuarios> user = DataBase.getUsuarios();
+%>
 <html>
-<%@ include file="WEB-INF/header.jspf" %> 
+    <%if (request.getParameter("logon")== null) {%>
+        <%@ include file="WEB-INF/header.jspf" %>   
+    <%}%>
+    <%if (request.getParameter("logon")!=null) {%>
+        <%@include file="WEB-INF/logado.jspf" %>
+    <%}%>
     <div class="container">
-        <%@ include file="WEB-INF/menu.jspf" %>     
+        <%@ include file="WEB-INF/menu.jspf" %>
         <div class="row">
             <div class="col-md-6">
         <h1>WORLD Domination Quiz!</h1>
