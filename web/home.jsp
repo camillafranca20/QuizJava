@@ -11,9 +11,9 @@ String nome = "";
     if (request.getParameter("entrar") != null) {
             nome = request.getParameter("nome");
             Usuarios u = new Usuarios();
-            u.setNome(nome);
+            u.setNome_usuario(nome);
             for (Usuarios usuarios : d.getUsuarios()) {
-                    if(usuarios.getNome().equals(nome)){
+                    if(usuarios.getNome_usuario().equals(nome)){
                         a = 1;
                         break;
                     }
@@ -36,7 +36,7 @@ String nome = "";
         <h3>Média</h3>
         <h4><%= 100.0*Quiz.getGradeAverage() %>%</h4>
         <hr/>
-        <h1>Usuário: <%= d.getUsuarios().get(d.getUsuarios().size()-1).getNome()%></h1>
+        <h1>Usuário: <%= d.getUsuarios().get(d.getUsuarios().size()-1).getNome_usuario()%></h1>
         <a href="teste.jsp"><button class="badge">Iniciar Quiz</button></a>
         
                 </div>
