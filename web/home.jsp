@@ -19,7 +19,7 @@ String nome = "";
                     }
                 }
             if(a!=1){
-                 d.adicionarUsuarios(u);
+                 response.sendRedirect("cadastro.jsp");
             }}            
 %>
 <html>
