@@ -4,10 +4,6 @@
 <%@page import="com.domain.quiz.DataBase"%>
 <%@page import="com.domain.quiz.Usuarios"%>
 <%@page import="java.util.ArrayList"%>
-<%
-    ArrayList<Usuarios> usuario = DataBase.getUsuarios();
-%>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

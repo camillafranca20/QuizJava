@@ -1,3 +1,4 @@
+
 <%@page import="com.domain.quiz.DataBase"%>
 <%@page import="com.domain.quiz.Usuarios"%>
 <%@page import="com.domain.quiz.Quiz"%>
@@ -6,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
+     String acao = " ";
     if(request.getParameter("test")!=null){
         Quiz.validateTest(new String[]{
             request.getParameter("0"),
@@ -17,7 +19,7 @@
             request.getParameter("6"),
             request.getParameter("7") 
         });
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("home.jsp");
     }
 %>
 <html>
@@ -31,7 +33,7 @@
         <%@ include file="WEB-INF/menu.jspf" %>
         <div class="container">
             <h1>Domination Quiz</h1>
-            <h2>Usuário:</h2>
+            <h2>Usuário: </h2>
             <h2>Matéria: </h2>
             <hr/>
             <center>
