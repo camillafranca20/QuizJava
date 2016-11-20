@@ -7,6 +7,7 @@
 <%
 String nome = "";
     int a = 0;
+    int i = 0;
     DataBase d = new DataBase();
     if (request.getParameter("entrar") != null) {
             nome = request.getParameter("nome");
@@ -17,6 +18,7 @@ String nome = "";
                         a = 1;
                         break;
                     }
+                    i++;
                 }
             if(a!=1){
                  response.sendRedirect("cadastro.jsp");
@@ -36,7 +38,7 @@ String nome = "";
         <h3>Média</h3>
         <h4><%= 100.0*Quiz.getGradeAverage() %>%</h4>
         <hr/>
-        <h1>Usuário: <%= d.getUsuarios().get(d.getUsuarios().size()-1).getNome_usuario()%></h1>
+        <h1>Usuário: <%= d.getUsuarios().get(i).getNome_usuario()%></h1>
         <a href="teste.jsp"><button class="badge">Iniciar Quiz</button></a>
         
                 </div>
