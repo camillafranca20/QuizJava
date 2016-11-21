@@ -21,7 +21,8 @@ String nome = "";
                     i++;
                 }
             if(a!=1){
-                 response.sendRedirect("cadastro.jsp");
+                i = 0;
+                response.sendRedirect("cadastro.jsp");
             }}            
 %>
 <html>
@@ -38,7 +39,7 @@ String nome = "";
         <h3>Média</h3>
         <h4><%= 100.0*Quiz.getGradeAverage() %>%</h4>
         <hr/>
-        <h1>Usuário: <%= d.getUsuarios().get(i).getNome_usuario()%></h1>
+        <h1>Usuário: <%= d.getUsuarios().get(i).getNome()%></h1>
         <form action="teste.jsp">
         <input type="hidden" name="name_login" value="<%= d.getUsuarios().get(i).getNome_usuario()%>"
         <input type="submit"><button class="badge">Iniciar Quiz</button></input>
