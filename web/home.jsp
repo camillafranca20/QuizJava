@@ -39,8 +39,10 @@ String nome = "";
         <h4><%= 100.0*Quiz.getGradeAverage() %>%</h4>
         <hr/>
         <h1>Usuário: <%= d.getUsuarios().get(i).getNome_usuario()%></h1>
-        <a href="teste.jsp"><button class="badge">Iniciar Quiz</button></a>
-        
+        <form action="teste.jsp">
+        <input type="hidden" name="name_login" value="<%= d.getUsuarios().get(i).getNome_usuario()%>"
+        <input type="submit"><button class="badge">Iniciar Quiz</button></input>
+        </form>
                 </div>
             </div>
         </div>

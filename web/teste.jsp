@@ -33,7 +33,7 @@
         <%@ include file="WEB-INF/menu.jspf" %>
         <div class="container">
             <h1>Domination Quiz</h1>
-            <h2>Usuário: </h2>
+            <h2>Usuário: <%= request.getParameter("name_login") %></h2>
             <h2>Matéria: </h2>
             <hr/>
             <center>
