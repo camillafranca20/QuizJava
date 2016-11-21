@@ -41,8 +41,8 @@ String nome = "";
         <hr/>
         <h1>Usuário: <%= n %> </h1>
         <form action="teste.jsp">
-        <input type="hidden" name="name_login" value="<%= n %>"
-        <input type="submit"><button class="badge">Iniciar Quiz</button></input>
+        <input type="hidden" name="name_login" value="<%= n %>">
+        <button class="bad996243707ge"><input type="submit" value="Iniciar Quiz"></button>
         </form>
                 </div>
             </div>
