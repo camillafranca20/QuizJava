@@ -15,6 +15,21 @@ public class Usuarios {
     private String cidade;
     private String email;
     private String nome_usuario;
+    private double ultimaNota;
+    private double mediaUser;
+    
+    public double getUltimaNota(){
+        return ultimaNota;
+    }
+    public void setUltimaNota(double ultimaNota){
+        this.ultimaNota = ultimaNota;
+    }
+    public double getMediaUser(){
+        return mediaUser;
+    }
+    public void setMediaUser(double mediaUser){
+        this.mediaUser = mediaUser;
+    }
 
     public String getNome() {
         return nome;

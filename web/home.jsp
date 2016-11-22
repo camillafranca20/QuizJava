@@ -4,6 +4,7 @@
 <%@page import="com.domain.quiz.DataBase"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <%
 String nome = "";
     int a = 0;
@@ -26,6 +27,7 @@ String nome = "";
     }            
 %>
 <html>
+    
     <%@ include file="WEB-INF/header.jspf" %>
     <div class="container">
     <%@ include file="WEB-INF/menu.jspf" %>
@@ -35,14 +37,14 @@ String nome = "";
         <h1>WORLD Domination Quiz!</h1>
         <hr/>
         <h3>Última nota</h3>
-        <h4><%= 100.0*Quiz.getLastGrade() %>%</h4>
+        <h4><%= 100.0*Quiz.getUltimaNotaUser() %>%</h4>
         <h3>Média</h3>
-        <h4><%= 100.0*Quiz.getGradeAverage() %>%</h4>
+        <h4><%= 100.0*Quiz.getMediaUser() %>%</h4>
         <hr/>
         <h1>Usuário: <%= n %> </h1>
         <form action="teste.jsp">
         <input type="hidden" name="name_login" value="<%= n %>">
-        <button class="bad996243707ge"><input type="submit" value="Iniciar Quiz"></button>
+        <a href="quiz.jsp"><button class="badge">Iniciar Quiz</button></a>
         </form>
                 </div>
             </div>

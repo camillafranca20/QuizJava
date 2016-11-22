@@ -7,7 +7,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-     String acao = " ";
     if(request.getParameter("test")!=null){
         Quiz.validateTest(new String[]{
             request.getParameter("0"),
@@ -51,7 +50,7 @@
                     <%}%>
                 <hr/>
                 <%}%>
-                <input type="submit" name="test" class="btn btn-primary" value="Concluir"/>
+                <a href="home.jsp"><input type="submit" name="test" class="btn btn-primary" value="Concluir"/></a>
             </form>
             </div>
         </div>

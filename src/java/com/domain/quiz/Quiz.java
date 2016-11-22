@@ -176,11 +176,11 @@ public class Quiz {
         Quiz.contTeste++;
         return nota;
     }
-    public static double getLastGrade(){
+    public static double getUltimaNotaUser(){
         return Quiz.ultimaNota;
     }
-    public static double getGradeAverage(){
-        return Quiz.MediaNotas / (double)Quiz.contTeste;
+    public static double getMediaUser(){
+        return  Quiz.MediaNotas / (double)Quiz.contTeste;
     }
     
 }
